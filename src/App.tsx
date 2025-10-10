@@ -1,14 +1,14 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import FindJobs from "./components/pages/FindJobs";
+import FindJobs from "./routes/FindJobs";
 import Layout from "./components/layout";
-import { TopCompanies } from "./components/pages/TopCompanies";
-import { JobTracker } from "./components/pages/JobTracker";
-import { MyCalendar } from "./components/pages/MyCalendar";
-import { Messages } from "./components/pages/Messages";
-import { Notifications } from "./components/pages/Notifications";
-import { Documents } from "./components/pages/Documents";
+import { TopCompanies } from "./routes/TopCompanies";
+import { JobTracker } from "./routes/JobTracker";
+import { MyCalendar } from "./routes/MyCalendar";
+import { Documents } from "./routes/Documents";
+import { Messages } from "./routes/Messages";
+import { Notifications } from "./routes/Notifications";
 
 function App() {
   return (
