@@ -5,6 +5,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import profilePhoto from '@/assets/images/profile-picture.png';
+import coverPhoto from '@/assets/images/cover-photo.png';
 
 const profileDetails = {
     userName: "Albert Flores",
@@ -13,8 +15,8 @@ const profileDetails = {
     visitor: 140,
     viewers: 20,
     jobs: 88,
-    coverPhoto: "/src/assets/cover-photo.png",
-    profilePicture: "/src/assets/profile-picture.png",
+    coverPhoto: coverPhoto,
+    profilePicture: profilePhoto,
 };
 
 const Profile = () => {
