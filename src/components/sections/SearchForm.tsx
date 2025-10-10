@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent, type FormEvent, } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
@@ -11,28 +11,34 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 
+interface FormValues {
+    title: string;
+    location: string;
+    jobType: string;
+}
+
 const SearchForm = () => {
-    const [formValues, setFormValues] = useState({
+    const [formValues, setFormValues] = useState<FormValues>({
         title: "",
         location: "",
         jobType: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.value,
         });
     };
 
-    const handleSelectChange = (name, value) => {
+    const handleSelectChange = (name: keyof FormValues, value: string) => {
         setFormValues({
             ...formValues,
             [name]: value,
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(formValues);
         setFormValues({
@@ -122,7 +128,7 @@ const SearchForm = () => {
             {/* Similar Jobs */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 flex-wrap">
                 <span className="text-primary text-sm font-medium">Similar:</span>
-                <ul className="flex items-center gap-2 sm:gap-3 text-primary text-xs sm:text-sm  flex-wrap">
+                <ul className="flex items-center gap-2 sm:gap-3 text-primary text-xs sm:text-sm flex-wrap">
                     {["Frontend", "Backend", "Graphic Designer"].map((job) => (
                         <li
                             key={job}
