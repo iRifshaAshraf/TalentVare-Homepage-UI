@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger, } from "@/components/ui/menubar"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import logo from '@/assets/images/logo.png';
+import avatar from '@/assets/images/avatar-1.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +28,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between max-w-7xl mx-auto">
                 <Link to="/" className="flex items-center gap-2 flex-shrink-0">
                     <img
-                        src="src/assets/logo.png"
+                        src={logo}
                         alt="Find Jobs Logo"
                         className="h-8 w-auto"
                     />
@@ -74,7 +76,7 @@ const Navbar = () => {
                         <MenubarMenu>
                             <MenubarTrigger className="cursor-pointer p-0">
                                 <Avatar className="h-9 w-9">
-                                    <AvatarImage src="src/assets/avatar-1.png" alt="user" />
+                                    <AvatarImage src={avatar} alt="user" />
                                     <AvatarFallback>U</AvatarFallback>
                                 </Avatar>
                             </MenubarTrigger>
@@ -93,7 +95,7 @@ const Navbar = () => {
                         <MenubarMenu>
                             <MenubarTrigger className="cursor-pointer p-0">
                                 <Avatar className="h-8 w-8">
-                                    <AvatarImage src="src/assets/avatar-1.png" alt="user" />
+                                    <AvatarImage src={avatar} alt="user" />
                                     <AvatarFallback>U</AvatarFallback>
                                 </Avatar>
                             </MenubarTrigger>

@@ -1,12 +1,12 @@
 import { Bookmark, MapPin, Clock } from 'lucide-react';
 import { Card } from '../ui/card';
 import { useState } from 'react';
-
+import teamsLogo from '@/assets/images/teams-logo.png';
 export const JobCard = ({
     isPromoted = false,
     jobTitle = "UI/UX Designer",
     company = "Teams",
-    companyLogo = "/src/assets/teams-logo.png",
+    companyLogo = teamsLogo,
     location = "Seattle, USA (Remote)",
     postedTime = "1 day ago",
     applicants = "22 applicants"
